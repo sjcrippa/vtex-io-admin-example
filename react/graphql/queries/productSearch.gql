@@ -1,0 +1,14 @@
+query productSearch($category: string) {
+    productSearch(category: $category) @context(provider: "vtex.search-graphql"){
+        products {
+            productID
+            productName
+            specificationGroups {
+                productNamespecifications{
+                    name
+                    values
+                }
+            }
+        }
+    }
+}
